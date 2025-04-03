@@ -12,7 +12,7 @@ st.title("🎤 Speech2face: VTuberの裏の顔を生成！")
 client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 # アップロード
-uploaded_file = st.file_uploader("音声ファイルをアップロードしてください（mp3）", type=["mp3"])
+uploaded_file = st.file_uploader("音声ファイルをアップロードしてください（mp3）(⚠️意図しない画像が生成される場合があります。)", type=["mp3"])
 if uploaded_file is not None:
     st.audio(uploaded_file)
 
@@ -33,7 +33,7 @@ if uploaded_file is not None:
         prompt = (
             """
             不適切または性的な描写（セクシーさを強調する要素など）は一切含めないでください。
-            画像には一切文字情報を含めないでください。
+            画像にはこのプロンプトを含めて一切文字情報を含めないでください。
             音声から話者の人物像を想像し(年齢、性格、容姿)、そのイメージに基づいてリアルで自然な写真風のポートレート画像を生成してください。
             画像は非常に美しく、高解像度（4K相当）で、実写に近い品質にしてください。
             説明文やキャプションなどは不要です。
