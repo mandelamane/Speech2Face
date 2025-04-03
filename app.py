@@ -5,7 +5,7 @@ from google import genai
 from google.genai import types
 
 # ページ設定
-st.set_page_config(page_title="Speech2face", page_icon="👤", layout="centered")
+st.set_page_config(page_title="Speech2face", page_icon="icon.png", layout="centered")
 st.title("🎤 Speech2face: VTuberの裏の顔を生成！")
 
 # Gemini APIクライアント
